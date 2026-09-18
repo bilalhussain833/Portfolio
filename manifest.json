@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Git-Peek: Contextual GitHub Profile Viewer",
+  "version": "1.0",
+  "description": "Hover over GitHub profile links to see quick user statistics.",
+  "permissions": [],
+  "host_permissions": [
+    "https://api.github.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
